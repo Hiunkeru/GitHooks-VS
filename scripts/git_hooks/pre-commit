@@ -8,8 +8,8 @@ GITFILES=$(git diff --name-only --diff-filter=ACM "*.cs" | sed 's| |\\ |g')
 [ -z "$GITFILES" ] && exit 0
 # Format all selected files
 echo "$DOTNETFORMATFILES"
-dotnet-format -v diag -f .
+xargs dotnet-format -v diag -f 
 
 # Add back the modified files to staging
-echo "$GITFILES" | git add
+echo "$GITFILES" | xargs git add .
 exit 0
