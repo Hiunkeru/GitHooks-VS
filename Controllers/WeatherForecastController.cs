@@ -40,26 +40,23 @@ namespace EjemploGitHook.Controllers
         public void GetPrueba()
         {
 
-
-
-
-
             var foo = 1;
             switch (foo)
             {
-                               case 0: Console.Write("1");
-           break;
-                      case 1:
-                                                Console.Write("1");
+                case 0:
+                    Console.Write("1");
                     break;
-           case 2:
-                                        Console.Write("1");
+                case 1:
+                    Console.Write("1");
+                    break;
+                case 2:
+                    Console.Write("1");
                     break;
                 case 3:
-           Console.Write("1");
+                    Console.Write("1");
                     Console.Write("2");
                     break;
-          default:
+                default:
                     break;
             }
         }
